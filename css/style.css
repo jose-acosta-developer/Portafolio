@@ -1,9 +1,10 @@
 :root[data-theme=light] {
   --color-1: rgb(152, 97, 255);
-  --background-1: rgb(233, 233, 255);
+  --background-1: rgb(255, 255, 255);
   --background-2: rgb(246, 247, 255);
   --contraste: rgb(255, 255, 255);
   --text-color: #000;
+  --subtext-color: #0000007e;
   --button-color: #ffffffbb;
 }
 
@@ -12,6 +13,7 @@
   --background-1: rgb(30, 26, 41);
   --background-2: rgb(25, 18, 31);
   --text-color: white;
+  --subtext-color: #ffffff7e;
   --contraste: rgb(0, 0, 0);
   --button-color: rgba(28, 20, 39, 0.589);
 }
@@ -26,7 +28,7 @@
 h1,
 h2,
 h3 {
-  font-family: "Lexend", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 p {
@@ -41,8 +43,9 @@ p {
   color: transparent;
   display: inline-block;
   animation: movimientoDegradado 3s ease-in-out infinite;
-  font-size: 50px;
-  font-family: "Boldonse", sans-serif;
+  font-size: 70px;
+  font-family: "Kaushan Script", cursive;
+  font-style: italic;
   white-space: nowrap;
 }
 
@@ -206,12 +209,35 @@ button {
 }
 .header__div__text {
   display: grid;
-  gap: 50px;
+}
+.header__div__text ul {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  gap: 20px;
+}
+.header__div__text ul li {
+  list-style: none;
+  font-family: "rubik";
+}
+.header__div__text ul li:nth-child(1) {
+  color: white;
+  background: linear-gradient(135deg, #ff0a6c 0%, #2d27ff);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.header__div__text ul li:nth-child(2) {
+  color: var(--text-color);
 }
 .header__div__text__h1 {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 600;
+  margin-bottom: 50px;
+}
+.header__div__text p:nth-child(3) {
+  color: var(--subtext-color);
+  max-width: 800px;
 }
 .header__button {
   font-size: 23px;

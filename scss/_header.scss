@@ -120,11 +120,37 @@
 
     &__text {
       display: grid;
-      gap: 50px;
+
+      ul {
+        @include global.center(flex, none, center);
+        gap: 20px;
+        li {
+          list-style: none;
+          font-family: "rubik";
+        }
+
+        li:nth-child(1) {
+          color: white;
+          background: linear-gradient(135deg, #ff0a6c 0%, #2d27ff);
+          padding: 10px 20px;
+          border-radius: 5px;
+        }
+
+        li:nth-child(2) {
+          color: var(--text-color);
+        }
+      }
+
       &__h1 {
         font-family: "Outfit", sans-serif;
         font-size: 60px;
         font-weight: 600;
+        margin-bottom: 50px;
+      }
+
+      p:nth-child(3) {
+        color: var(--subtext-color);
+        max-width: 800px;
       }
     }
   }

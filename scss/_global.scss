@@ -1,9 +1,10 @@
 :root[data-theme="light"] {
   --color-1: rgb(152, 97, 255);
-  --background-1: rgb(233, 233, 255);
+  --background-1: rgb(255, 255, 255);
   --background-2: rgb(246, 247, 255);
   --contraste: rgb(255, 255, 255);
   --text-color: #000;
+  --subtext-color: #0000007e;
   --button-color: #ffffffbb;
 }
 
@@ -12,6 +13,7 @@
   --background-1: rgb(30, 26, 41);
   --background-2: rgb(25, 18, 31);
   --text-color: white;
+  --subtext-color: #ffffff7e;
   --contraste: rgb(0, 0, 0);
   --button-color: rgba(28, 20, 39, 0.589);
 }
@@ -52,7 +54,7 @@
 h1,
 h2,
 h3 {
-  font-family: "Lexend", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 p {
   font-family: "Rubik", sans-serif;
@@ -60,7 +62,6 @@ p {
 
 .name {
   background: linear-gradient(135deg, #ff0a6c, #2d27ff, #ff0a6c);
-
   background-size: 200% auto;
 
   -webkit-background-clip: text;
@@ -70,8 +71,9 @@ p {
 
   animation: movimientoDegradado 3s ease-in-out infinite;
 
-  font-size: 50px;
-  font-family: "Boldonse", sans-serif;
+  font-size: 70px;
+  font-family: "Kaushan Script", cursive;
+  font-style: italic;
   white-space: nowrap;
 }
 
