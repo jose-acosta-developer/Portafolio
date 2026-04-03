@@ -1,7 +1,7 @@
 :root[data-theme=light] {
   --color-1: rgb(152, 97, 255);
-  --background-1: rgb(250, 250, 255);
-  --background-2: rgb(239, 240, 255);
+  --background-1: rgb(233, 233, 255);
+  --background-2: rgb(246, 247, 255);
   --contraste: rgb(255, 255, 255);
   --text-color: #000;
   --button-color: #ffffffbb;
@@ -30,7 +30,7 @@ h3 {
 }
 
 p {
-  font-family: "Dosis", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .name {
@@ -40,9 +40,9 @@ p {
   background-clip: text;
   color: transparent;
   display: inline-block;
-  animation: movimientoDegradado 3s linear infinite;
-  font-family: "Caveat", cursive;
-  font-size: 85px;
+  animation: movimientoDegradado 3s ease-in-out infinite;
+  font-size: 50px;
+  font-family: "Boldonse", sans-serif;
   white-space: nowrap;
 }
 
@@ -118,7 +118,7 @@ button {
 .header__nav__div__content__btn-1, .header__nav__div__content__btn-2, .header__nav__div__content__btn-3 {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
-  padding: 13px 25px;
+  padding: 16px 25px;
 }
 .header__nav__div__content {
   /*
@@ -130,24 +130,24 @@ button {
   */
 }
 .header__nav__div__content::before {
-  width: 60px;
-  height: 2px;
+  width: 80px;
+  height: 3px;
   transition: all 0.5s ease;
   background: linear-gradient(135deg, #ff0a6c 0%, #2d27ff);
   border-radius: 30px;
   content: "";
   position: absolute;
-  z-index: 10;
-  right: 19px;
-  bottom: 7px;
+  z-index: 1;
+  right: 25px;
+  bottom: 8px;
 }
 .header__nav__div__content:has(.header__nav__div__content__btn-1:hover)::before {
-  width: 99px;
-  right: 240px;
+  width: 90px;
+  right: 273px;
 }
 .header__nav__div__content:has(.header__nav__div__content__btn-2:hover)::before {
-  width: 110px;
-  right: 105px;
+  width: 100px;
+  right: 140px;
 }
 .header__nav__div__menu {
   display: none;
@@ -392,6 +392,10 @@ button {
     padding: 130px 10%;
   }
 }
+.about__div__img {
+  width: 100px;
+  height: 100px;
+}
 .about__div__text {
   margin-top: 30px;
   position: relative;
@@ -407,7 +411,7 @@ button {
     font-size: 45px;
   }
   .name {
-    font-size: 60px;
+    font-size: 35px;
   }
   p {
     font-size: 17px;
@@ -455,7 +459,7 @@ button {
     gap: 10px;
   }
   .name {
-    font-size: 45px;
+    font-size: 20px;
   }
   p {
     font-size: 13px;

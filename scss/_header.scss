@@ -33,7 +33,7 @@
         &__btn-3 {
           font-family: "M PLUS Rounded 1c", sans-serif;
           font-size: 16px;
-          padding: 13px 25px;
+          padding: 16px 25px;
         }
 
         /*
@@ -45,26 +45,27 @@
         */
       }
       &__content::before {
-        width: 60px;
-        height: 2px;
+        width: 80px;
+        height: 3px;
+
         transition: all 0.5s ease;
         background: linear-gradient(135deg, #ff0a6c 0%, #2d27ff);
         border-radius: 30px;
 
         content: "";
         position: absolute;
-        z-index: 10;
-        right: 19px;
-        bottom: 7px;
+        z-index: 1;
+        right: 25px;
+        bottom: 8px;
       }
       &__content:has(.header__nav__div__content__btn-1:hover)::before {
-        width: 99px;
-        right: 240px;
+        width: 90px;
+        right: 273px;
       }
 
       &__content:has(.header__nav__div__content__btn-2:hover)::before {
-        width: 110px;
-        right: 105px;
+        width: 100px;
+        right: 140px;
       }
 
       &__menu {

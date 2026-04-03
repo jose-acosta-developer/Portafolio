@@ -1,7 +1,7 @@
 :root[data-theme="light"] {
   --color-1: rgb(152, 97, 255);
-  --background-1: rgb(250, 250, 255);
-  --background-2: rgb(239, 240, 255);
+  --background-1: rgb(233, 233, 255);
+  --background-2: rgb(246, 247, 255);
   --contraste: rgb(255, 255, 255);
   --text-color: #000;
   --button-color: #ffffffbb;
@@ -55,7 +55,7 @@ h3 {
   font-family: "Lexend", sans-serif;
 }
 p {
-  font-family: "Dosis", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .name {
@@ -68,9 +68,10 @@ p {
   color: transparent;
   display: inline-block;
 
-  animation: movimientoDegradado 3s linear infinite;
-  font-family: "Caveat", cursive;
-  font-size: 85px;
+  animation: movimientoDegradado 3s ease-in-out infinite;
+
+  font-size: 50px;
+  font-family: "Boldonse", sans-serif;
   white-space: nowrap;
 }
 
