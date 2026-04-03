@@ -1,0 +1,96 @@
+:root[data-theme="light"] {
+  --color-1: rgb(152, 97, 255);
+  --background-1: rgb(245, 238, 255);
+  --background-2: rgb(253, 250, 255);
+  --text-color: #000;
+  --button-color: #ffffffbb;
+}
+
+:root[data-theme="dark"] {
+  --color-1: rgb(140, 0, 255);
+  --background-1: rgb(30, 26, 41);
+  --background-2: rgb(25, 18, 31);
+  --text-color: white;
+  --button-color: rgba(28, 20, 39, 0.589);
+}
+
+@mixin center($diplay, $justify, $aling) {
+  display: $diplay;
+  justify-content: $justify;
+  align-items: $aling;
+}
+
+// Mixin recomendado
+@mixin element-size($padding-y: 0px) {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+
+  // Mobile (por defecto)
+  padding: $padding-y 5%;
+
+  // Tablet
+  @media (min-width: 768px) {
+    padding: $padding-y 8%;
+  }
+
+  // Desktop
+  @media (min-width: 1024px) {
+    padding: $padding-y 10%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lexend", sans-serif;
+}
+p {
+  font-family: "Dosis", sans-serif;
+}
+
+.name {
+  background: linear-gradient(135deg, #ff0a6c, #2d27ff, #ff0a6c);
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+
+  animation: movimientoDegradado 3s linear infinite;
+  font-family: "Caveat", cursive;
+  font-size: 85px;
+  white-space: nowrap;
+}
+
+@keyframes movimientoDegradado {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+body {
+  background: var(--background-1);
+  color: var(--text-color);
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+button {
+  color: var(--text-color);
+  background: none;
+  cursor: pointer;
+}

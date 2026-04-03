@@ -1,0 +1,76 @@
+@use "global";
+
+@media (max-width: 1024px) {
+  .header__div__text__h1 {
+    font-size: 45px;
+  }
+  .name {
+    font-size: 60px;
+  }
+  p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__div {
+      &__text {
+        text-align: center;
+        padding: 0px;
+        border-left: 0px;
+        &__h1 {
+          font-size: 25px;
+        }
+      }
+    }
+
+    &__nav {
+      &__div {
+        &__content {
+          position: absolute;
+          width: max-content;
+          top: 100%;
+          right: -170px;
+          background: var(--background-2);
+          border-bottom: 1px solid rgba(124, 124, 124, 0.445);
+          border-left: 1px solid rgba(124, 124, 124, 0.445);
+          padding: 20px 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 20px;
+          border-radius: 0px 0px 0px 20px;
+          transition: right 0.3s ease;
+
+          &__btn-1,
+          &__btn-2,
+          &__btn-3 {
+            text-align: start;
+            width: 140px;
+          }
+
+          &.active {
+            right: 0;
+          }
+        }
+        &__content::before {
+          display: none;
+        }
+        &__menu {
+          display: block;
+        }
+      }
+    }
+
+    &__contactos {
+      gap: 10px;
+    }
+  }
+  .name {
+    font-size: 45px;
+  }
+  p {
+    font-size: 13px;
+  }
+}
