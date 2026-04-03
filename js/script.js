@@ -13,15 +13,22 @@ btn.addEventListener("click", () => {
 
 const html = document.documentElement;
 const btnTheme = document.getElementById("btn__theme");
+const sun = document.getElementById("sun");
+const moon = document.getElementById("moon");
 
 btnTheme.addEventListener("click", () => {
-  const icon = btnTheme.querySelector("i");
   if (html.dataset.theme === "dark") {
     html.dataset.theme = "light";
-    icon.className = "fa-solid fa-moon";
+    sun.style.transform = "translate(-215%, -50%)";
+    moon.style.transform = "translate(-50%, -50%)";
+    moon.style.opacity = "1";
+    sun.style.opacity = "0";
   } else {
     html.dataset.theme = "dark";
-    icon.className = "fa-solid fa-sun";
+    sun.style.transform = "translate(-50%, -50%)";
+    moon.style.transform = "translate(120%, -50%)";
+    moon.style.opacity = "0";
+    sun.style.opacity = "1";
   }
 });
 

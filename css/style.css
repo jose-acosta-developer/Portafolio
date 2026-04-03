@@ -1,7 +1,8 @@
 :root[data-theme=light] {
   --color-1: rgb(152, 97, 255);
-  --background-1: rgb(245, 238, 255);
-  --background-2: rgb(253, 250, 255);
+  --background-1: rgb(250, 250, 255);
+  --background-2: rgb(239, 240, 255);
+  --contraste: rgb(255, 255, 255);
   --text-color: #000;
   --button-color: #ffffffbb;
 }
@@ -11,6 +12,7 @@
   --background-1: rgb(30, 26, 41);
   --background-2: rgb(25, 18, 31);
   --text-color: white;
+  --contraste: rgb(0, 0, 0);
   --button-color: rgba(28, 20, 39, 0.589);
 }
 
@@ -108,11 +110,14 @@ button {
 }
 .header__nav__div__content {
   position: relative;
+  background: var(--background-1);
+  border-radius: 50px;
+  padding: 0px 10px 0px 10px;
 }
 .header__nav__div__content__btn-1, .header__nav__div__content__btn-2, .header__nav__div__content__btn-3 {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 13px 25px;
 }
 .header__nav__div__content {
   /*
@@ -124,24 +129,24 @@ button {
   */
 }
 .header__nav__div__content::before {
-  width: 70px;
+  width: 60px;
   height: 2px;
   transition: all 0.5s ease;
   background: linear-gradient(135deg, #ff0a6c 0%, #2d27ff);
   border-radius: 30px;
   content: "";
   position: absolute;
-  z-index: -1;
-  right: 2px;
-  bottom: 0px;
+  z-index: 10;
+  right: 19px;
+  bottom: 10px;
 }
 .header__nav__div__content:has(.header__nav__div__content__btn-1:hover)::before {
-  width: 111px;
-  right: 200px;
+  width: 99px;
+  right: 240px;
 }
 .header__nav__div__content:has(.header__nav__div__content__btn-2:hover)::before {
-  width: 125px;
-  right: 73px;
+  width: 110px;
+  right: 105px;
 }
 .header__nav__div__menu {
   display: none;
@@ -149,28 +154,35 @@ button {
   font-size: 22px;
 }
 .header__nav__div__theme {
-  width: 60px;
-  height: 35px;
-  border-radius: 3px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   font-size: 20px;
   background: var(--text-color);
-  color: var(--color-1);
+  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: none;
   align-items: center;
 }
 .header__nav__div__theme i {
-  height: 40px;
-  width: 40px;
-  color: white;
+  color: var(--contraste);
   border-radius: 50px;
+  font-size: 25px;
+  transition: transform 0.5s ease-in-out, opacity 0.9s ease-in-out;
+}
+.header__nav__div__theme__sun {
   position: absolute;
-  right: -1px;
-  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header__nav__div__theme__moon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(70%, -50%);
+  opacity: 0;
 }
 :root[data-theme=light] .header__nav__div__theme i {
   right: calc(100% - 39px);
