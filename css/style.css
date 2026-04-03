@@ -113,6 +113,7 @@ button {
   background: var(--background-1);
   border-radius: 50px;
   padding: 0px 10px 0px 10px;
+  border: 1px solid rgba(124, 124, 124, 0.322);
 }
 .header__nav__div__content__btn-1, .header__nav__div__content__btn-2, .header__nav__div__content__btn-3 {
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -138,7 +139,7 @@ button {
   position: absolute;
   z-index: 10;
   right: 19px;
-  bottom: 10px;
+  bottom: 7px;
 }
 .header__nav__div__content:has(.header__nav__div__content__btn-1:hover)::before {
   width: 99px;
