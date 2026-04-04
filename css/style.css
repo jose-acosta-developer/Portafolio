@@ -45,7 +45,6 @@ p {
   animation: movimientoDegradado 3s ease-in-out infinite;
   font-size: 70px;
   font-family: "Kaushan Script", cursive;
-  font-style: italic;
   white-space: nowrap;
 }
 
@@ -80,9 +79,7 @@ button {
 .header__nav {
   position: fixed;
   width: 100%;
-  background: color-mix(in srgb, var(--background-2) 30%, transparent);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--background-2);
   z-index: 100;
   top: 0px;
 }
@@ -241,14 +238,24 @@ button {
 }
 .header__button {
   font-size: 23px;
-  padding: 15px 30px;
+  padding: 15px 30px 15px 30px;
   border-radius: 50px;
   z-index: 20;
   cursor: pointer;
+  color: var(--subtext-color);
   position: absolute;
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header__button img {
+  width: 20px;
+  right: 10px;
+  top: 50%;
 }
 .header__button::after {
   content: "";
@@ -275,7 +282,7 @@ button {
   height: calc(100% + 4px);
   filter: blur(20px);
   animation: glowing 17s linear infinite;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, filter 0.3s ease;
   border-radius: 70px;
   opacity: 1;
 }
@@ -434,10 +441,11 @@ button {
 
 @media (max-width: 1024px) {
   .header__div__text__h1 {
-    font-size: 45px;
+    margin-top: 35px;
+    font-size: 40px;
   }
   .name {
-    font-size: 35px;
+    font-size: 50px;
   }
   p {
     font-size: 17px;

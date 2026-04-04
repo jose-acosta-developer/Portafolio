@@ -1,11 +1,13 @@
 const div = document.getElementById("contact");
 const btn = document.getElementById("btn__contact");
+const contact = document.getElementById("arrow");
 
 btn.addEventListener("click", () => {
   const varti = div.style.opacity === "1";
 
   div.style.opacity = varti ? "0" : "1";
   div.style.bottom = varti ? "30px" : "80px";
+  contact.style.transform = varti ? "rotate(0deg)" : "rotate(-90deg)";
 });
 btn.addEventListener("click", () => {
   btn.classList.toggle("active");
