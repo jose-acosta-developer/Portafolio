@@ -26,7 +26,7 @@
 
 // Mixin recomendado
 @mixin element-size($padding-y: 0px) {
-  max-width: 1600px;
+  max-width: 1800px;
   width: 100%;
   margin: 0 auto;
 
@@ -58,6 +58,7 @@ h3 {
 }
 p {
   font-family: "Rubik", sans-serif;
+  color: var(--subtext-color);
 }
 
 .name {

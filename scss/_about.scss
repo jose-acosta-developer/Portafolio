@@ -1,21 +1,37 @@
 @use "global";
 .about {
   @include global.element-size(130px);
-  &__div {
-    &__img {
-      width: 100px;
-      height: 100px;
-    }
-    &__text {
-      margin-top: 30px;
+  margin-top: 70px;
 
-      position: relative;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  gap: 80px;
+
+  &__picture {
+    width: 100%;
+    position: relative;
+    &__text {
+      width: 70%;
+      position: absolute;
+      bottom: 10%;
+      left: 55%;
+      border: 1px solid rgba(119, 119, 119, 0.404);
+      transform: translate(-20%, -0%);
+
+      background-color: rgba(0, 0, 0, 0.014);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
 
       h2 {
-        color: var(--color-1);
-        font-size: 30px;
         margin-bottom: 10px;
       }
+    }
+    &__img {
+      width: 100%;
+      border-radius: 30px;
     }
   }
 }
